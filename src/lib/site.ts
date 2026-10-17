@@ -5,6 +5,6 @@ export const site = {
   socials: {
     Instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || '',
     Facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || '',
-    Tripadvisor: process.env.NEXT_PUBLIC_TRIPADVISOR_URL || '',
+    WhatsApp: 'https://wa.me/97685151075',
   },
 };

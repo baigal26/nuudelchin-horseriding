@@ -1,3 +1,4 @@
+import { WhatsAppIcon } from '@/components/whatsapp-icon';
 import { ArrowUpRight, Mountain } from 'lucide-react';
 import { site } from '@/lib/site';
 
@@ -31,27 +32,8 @@ function Facebook({ size = 18 }: { size?: number }) {
     </svg>
   );
 }
-function Tripadvisor({ size = 18 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      aria-hidden="true"
-    >
-      <path d="m2 7-1-2 5 1a13 13 0 0 1 12 0l5-1-1 2M9 17l3 3 3-3M10 9l2-2 2 2" />
-      <circle cx="6" cy="12" r="5" />
-      <circle cx="18" cy="12" r="5" />
-      <circle cx="6" cy="12" r="1.5" />
-      <circle cx="18" cy="12" r="1.5" />
-    </svg>
-  );
-}
 export function Socials() {
-  const icons = { Instagram, Facebook, Tripadvisor };
+  const icons = { Instagram, Facebook, WhatsApp: WhatsAppIcon };
   return (
     <div className="socials">
       {Object.entries(site.socials).map(([name, href]) => {

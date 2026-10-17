@@ -14,7 +14,7 @@
   "description": "Nuudelchin Mongolia travel website",
   "private": true,
   "engines": {
-    "node": ">=22"
+    "node": "22.x"
   },
   "dependencies": {
     "lucide-react": "^1.57.0",

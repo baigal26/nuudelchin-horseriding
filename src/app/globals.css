@@ -697,6 +697,29 @@ footer {
     font-size: 44px;
   }
 }
+.whatsapp-button {
+  position: fixed;
+  right: calc(20px + env(safe-area-inset-right, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 15;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 22%);
+  transition: transform 0.2s, background 0.2s;
+}
+.whatsapp-button:hover {
+  background: #128c7e;
+  transform: translateY(-3px);
+}
+.whatsapp-button:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

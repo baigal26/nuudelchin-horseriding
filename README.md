@@ -4,7 +4,7 @@ A Next.js App Router project with TypeScript, responsive CSS, Lucide icons, ESLi
 
 ## Development
 
-Requires Node.js 22+ and npm.
+Requires Node.js 22.x and npm.
 
 ```sh
 npm install
@@ -24,7 +24,13 @@ npm run build
 
 Deploy the generated `out/` directory to any static host supporting directory indexes. `npm run dev` serves local development. Configure the production site URL before building so sitemap and metadata use the correct domain. Environment settings are baked into the static build; rebuild when they change.
 
-## Content
+## Vercel deployment
+
+Import the repository with Root Directory left empty (the repository root), Framework Preset set to Next.js, and Output Directory override disabled. Do not select `src`, `public`, or `out` as the project root. The tracked `vercel.json` sets a clean lockfile-based install and the build command. Node is pinned to 22.x in `package.json`.
+
+If Vercel reports `NEXT_NO_VERSION`, check the install log and project environment for npm settings that skip installation, such as `NPM_CONFIG_PACKAGE_LOCK_ONLY` or `NPM_CONFIG_DRY_RUN`. The repository already declares Next.js as a production dependency. Push the configuration changes and deploy the new commit without reusing the build cache. Local builds do not verify Vercel dashboard settings.
+
+## Content files
 
 - `src/lib/trips.ts`: typed trip catalog, used by listings and generated detail pages.
 - `src/lib/site.ts`: brand, contact and social settings.
